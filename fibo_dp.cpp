@@ -11,12 +11,11 @@ int main()
     for(int i=2; i<80; i++)
         FIBO[i] = -1; 
 
-    bool flag = true; 
     int n;
     cout << "Enter a number between 0 and 79: (-1 to quit)\n"; 
     int count = 1;
 
-    while(flag)
+    while(1)
     {
         cout << "number " << count++ << ": "; 
         cin >> n; 
