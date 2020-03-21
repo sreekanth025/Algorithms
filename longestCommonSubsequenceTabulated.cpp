@@ -20,6 +20,7 @@ int LCS(string A, string B)
     int n = B.length();
 
     int Length[m+1][n+1]; 
+    cout << "Longest Common Subsequence: ";
 
     for(int i=0; i<=m; i++)
     {
@@ -29,12 +30,16 @@ int LCS(string A, string B)
                 Length[i][j] = 0;  
             
             else if(A[i-1] == B[j-1])
+            {
                 Length[i][j] = 1 + Length[i-1][j-1];
+                cout << A[i-1];
+            }
 
             else
                 Length[i][j] = max(Length[i-1][j], Length[i][j-1]); 
         }
     }
 
+    cout << "\n";
     return Length[m][n];
 } 
